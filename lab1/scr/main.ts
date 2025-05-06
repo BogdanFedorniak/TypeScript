@@ -9,7 +9,7 @@ function triangle(value1: number, type1: string, value2: number, type2: string):
     let hypotenuse: number, leg1: number, leg2: number, angle1: number, angle2: number;
 
     if (value1 <= 0 || value2 <= 0) {
-        console.log("Дані не можуть бути нижчі за 0 чи дорівнювати йому. ПЕРЕЧИТАЙ ІНСТРУКЦІЮ!");
+        console.log("Дані не можуть бути нижчі за 0 чи дорівнювати йому.");
         return "failed";
     }
 
@@ -26,7 +26,7 @@ function triangle(value1: number, type1: string, value2: number, type2: string):
             leg1 = type1 === "leg" ? value1 : value2;
             hypotenuse = type1 === "hypotenuse" ? value1 : value2;
             if (hypotenuse < leg1) {
-                console.log("Катет не може бути більшим за гіпотенузу. ПЕРЕЧИТАЙ ІНСТРУКЦІЮ!");
+                console.log("Катет не може бути більшим за гіпотенузу.");
                 return "failed";
             }
             leg2 = Math.sqrt(hypotenuse ** 2 - leg1 ** 2);
@@ -58,7 +58,7 @@ function triangle(value1: number, type1: string, value2: number, type2: string):
             angle2 = Math.PI / 2 - angle1;
             break;
         default:
-            console.log("Ти ввів несумісну пару параметрів трикутника. ПЕРЕЧИТАЙ ІНСТРУКЦІЮ!");
+            console.log("Ти ввів несумісну пару параметрів трикутника.");
             return "failed";
     }
 
@@ -66,7 +66,7 @@ function triangle(value1: number, type1: string, value2: number, type2: string):
     let beta = radToDeg(angle2);
 
     if (alpha >= 90 || beta >= 90) {
-        console.log("Кут не може бути більший за 90 чи дорівнювати йому. ПЕРЕЧИТАЙ ІНСТРУКЦІЮ!");
+        console.log("Кут не може бути більший за 90 чи дорівнювати йому.");
         return "failed";
     }
 
