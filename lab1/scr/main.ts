@@ -1,118 +1,89 @@
+function degToRad(degrees: number): number {
+    return degrees * (Math.PI / 180);
+}
+
 function triangle(value1: number, type1: string, value2: number, type2: string): string {
+    const radToDeg = (radians: number): number => radians * (180 / Math.PI);
+    const getKey = (type1: string, type2: string): string => `${type1}_${type2}`;
+
+    let hypotenuse: number, leg1: number, leg2: number, angle1: number, angle2: number;
+
     if (value1 <= 0 || value2 <= 0) {
-        console.log('Значення аргументів повинні бути додатніми.');
+        console.log("Дані не можуть бути нижчі за 0 чи дорівнювати йому. ПЕРЕЧИТАЙ ІНСТРУКЦІЮ!");
         return "failed";
     }
 
-    let a: number, b: number, c: number, alpha: number, beta: number;
-
-    if ((type1 === "leg" && type2 === "hypotenuse") || (type1 === "hypotenuse" && type2 === "leg")) {
-        if (type1 === "leg") {
-            a = value1;
-            c = value2;
-        } else {
-            a = value2;
-            c = value1;
-        }
-
-        // Перевірка на більшу гіпотенузу
-        if (c <= a) {
-            console.log('Гіпотенуза має бути більшою за катет.');
+    switch (getKey(type1, type2)) {
+        case "leg_leg":
+            leg1 = Math.min(value1, value2);
+            leg2 = Math.max(value1, value2);
+            hypotenuse = Math.sqrt(leg1 ** 2 + leg2 ** 2);
+            angle1 = Math.atan(leg1 / leg2);
+            angle2 = Math.PI / 2 - angle1;
+            break;
+        case "leg_hypotenuse":
+        case "hypotenuse_leg":
+            leg1 = type1 === "leg" ? value1 : value2;
+            hypotenuse = type1 === "hypotenuse" ? value1 : value2;
+            if (hypotenuse < leg1) {
+                console.log("Катет не може бути більшим за гіпотенузу. ПЕРЕЧИТАЙ ІНСТРУКЦІЮ!");
+                return "failed";
+            }
+            leg2 = Math.sqrt(hypotenuse ** 2 - leg1 ** 2);
+            angle2 = Math.asin(leg1 / hypotenuse);
+            angle1 = Math.PI / 2 - angle2;
+            break;
+        case "leg_opposite angle":
+        case "opposite angle_leg":
+            leg1 = type1 === "leg" ? value1 : value2;
+            angle2 = degToRad(type1 === "opposite angle" ? value1 : value2);
+            hypotenuse = leg1 / Math.sin(angle2);
+            leg2 = leg1 / Math.tan(angle2);
+            angle1 = Math.PI / 2 - angle2;
+            break;
+        case "leg_adjacent angle":
+        case "adjacent angle_leg":
+            leg1 = type1 === "leg" ? value1 : value2;
+            angle1 = degToRad(type1 === "adjacent angle" ? value1 : value2);
+            hypotenuse = leg1 / Math.cos(angle1);
+            leg2 = leg1 * Math.tan(angle1);
+            angle2 = Math.PI / 2 - angle1;
+            break;
+        case "hypotenuse_angle":
+        case "angle_hypotenuse":
+            hypotenuse = type1 === "hypotenuse" ? value1 : value2;
+            angle1 = degToRad(type1 === "angle" ? value1 : value2);
+            leg1 = hypotenuse * Math.cos(angle1);
+            leg2 = hypotenuse * Math.sin(angle1);
+            angle2 = Math.PI / 2 - angle1;
+            break;
+        default:
+            console.log("Ти ввів несумісну пару параметрів трикутника. ПЕРЕЧИТАЙ ІНСТРУКЦІЮ!");
             return "failed";
-        }
+    }
 
-        b = Math.sqrt(c ** 2 - a ** 2);
-        alpha = Math.asin(a / c);
-        beta = Math.acos(a / c);
+    let alpha = radToDeg(angle1);
+    let beta = radToDeg(angle2);
 
-    } else if ((type1 === "leg" && type2 === "angle") || (type1 === "angle" && type2 === "leg")) {
-        let leg: number, angle: number;
-        if (type1 === "leg") {
-            leg = value1;
-            angle = value2;
-        } else {
-            leg = value2;
-            angle = value1;
-        }
-
-        // Перевірка на гострий кут
-        if (angle <= 0 || angle >= 90) {
-            console.log('Кут має бути гострим (менше 90 градусів).');
-            return "failed";
-        }
-
-        angle = angle * (Math.PI / 180);
-
-        a = leg;
-        alpha = angle;
-        b = a * Math.tan(alpha);
-        c = a / Math.sin(alpha);
-        beta = Math.acos(a / c);
-
-    } else if ((type1 === "hypotenuse" && type2 === "angle") || (type1 === "angle" && type2 === "hypotenuse")) {
-        let hypotenuse: number, angle: number;
-        if (type1 === "hypotenuse") {
-            hypotenuse = value1;
-            angle = value2;
-        } else {
-            hypotenuse = value2;
-            angle = value1;
-        }
-
-        // Перевірка на гострий кут
-        if (angle <= 0 || angle >= 90) {
-            console.log('Кут має бути гострим (менше 90 градусів).');
-            return "failed";
-        }
-
-        angle = angle * (Math.PI / 180);
-
-        c = hypotenuse;
-        a = c * Math.cos(angle);
-        b = c * Math.sin(angle);
-        alpha = angle;
-        beta = Math.acos(a / c);
-
-    } else if ((type1 === "opposite angle" && type2 === "leg") || (type1 === "leg" && type2 === "opposite angle")) {
-        let oppositeAngle: number, leg: number;
-        if (type1 === "opposite angle") {
-            oppositeAngle = value1;
-            leg = value2;
-        } else {
-            oppositeAngle = value2;
-            leg = value1;
-        }
-
-        // Перевірка на гострий кут
-        if (oppositeAngle <= 0 || oppositeAngle >= 90) {
-            console.log('Кут має бути гострим (менше 90 градусів).');
-            return "failed";
-        }
-
-        oppositeAngle = oppositeAngle * (Math.PI / 180);
-
-        a = leg;
-        alpha = oppositeAngle;
-        b = a * Math.tan(alpha);
-        c = a / Math.sin(alpha);
-        beta = Math.acos(a / c);
-
-    } else {
-        console.log('Некоректна комбінація аргументів.');
+    if (alpha >= 90 || beta >= 90) {
+        console.log("Кут не може бути більший за 90 чи дорівнювати йому. ПЕРЕЧИТАЙ ІНСТРУКЦІЮ!");
         return "failed";
     }
 
-    console.log(`a = ${a.toFixed(2)}`);
-    console.log(`b = ${b.toFixed(2)}`);
-    console.log(`c = ${c.toFixed(2)}`);
-    console.log(`alpha = ${(alpha * (180 / Math.PI)).toFixed(2)} градусів`);
-    console.log(`beta = ${(beta * (180 / Math.PI)).toFixed(2)} градусів`);
-
-    console.log("'success'");
+    console.log(`a = ${leg1.toFixed(3)}`);
+    console.log(`b = ${leg2.toFixed(3)}`);
+    console.log(`c = ${hypotenuse.toFixed(3)}`);
+    console.log(`alpha = ${alpha.toFixed(3)}°`);
+    console.log(`beta = ${beta.toFixed(3)}°`);
     return "success";
 }
 
-// Виклики функції з іншими значеннями
-triangle(5, "leg", 2, "hypotenuse");  // Перевірка гіпотенузи
-triangle(9, "leg", 90, "angle");       // Перевірка гострого кута
-triangle(7, "hypotenuse", 15, "angle"); // Інші значення
+console.log("Ця консольна програма дозволяє обчислити прямокутний трикутник за заданими параметрами.");
+console.log("Можливі комбінації типів:");
+console.log("\t'leg' 'leg': Два катети.");
+console.log("\t'leg' 'hypotenuse': Катет і гіпотенуза.");
+console.log("\t'leg' 'opposite angle': Катет і протилежний кут.");
+console.log("\t'leg' 'adjacent angle': Катет і прилеглий кут.");
+console.log("\t'hypotenuse' 'angle': Гіпотенуза і гострий кут.");
+console.log("Використання: triangle(value1, type1, value2, type2)");
+console.log("Приклад: triangle(7, 'leg', 18, 'hypotenuse')");
