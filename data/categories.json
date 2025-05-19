@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "name": "Смартфони",
+        "shortname": "smartphones",
+        "notes": "Різні моделі смартфонів."
+    },
+    {
+        "id": 2,
+        "name": "Планшети",
+        "shortname": "tablets",
+        "notes": "Різні моделі планшетів."
+    },
+    {
+        "id": 3,
+        "name": "Ноутбуки",
+        "shortname": "laptops",
+        "notes": "Різні моделі ноутбуків."
+    },
+    {
+        "id": 4,
+        "name": "Аксесуари",
+        "shortname": "accessories",
+        "notes": "Різні аксесуари для пристроїв."
+    },
+    {
+        "id": 5,
+        "name": "Носимі пристрої",
+        "shortname": "wearables",
+        "notes": "Latest technology in wearables."
+      }
+    ]

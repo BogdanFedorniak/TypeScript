@@ -1,0 +1,45 @@
+{
+    "categoryName": "Смартфони",
+    "items": [
+        {
+            "id": "iphone-13",
+            "name": "iPhone 13",
+            "shortname": "iphone-13",
+            "description": "Новітня модель iPhone з покращеними характеристиками.",
+            "image": "https://place-hold.it/200x200/aaa/white/white&text=iPhone13",
+            "price": 1099
+        },
+        {
+            "id": "samsung-s21",
+            "name": "Samsung Galaxy S21",
+            "shortname": "samsung-s21",
+            "description": "Новий смартфон від Samsung з покращеними характеристиками.",
+            "image": "https://place-hold.it/200x200/aaa/white/white&text=SamsungGalaxyS21",
+            "price": 999
+        },
+        {
+            "id": "google-pixel-6",
+            "name": "Google Pixel 6",
+            "shortname": "google-pixel-6",
+            "description": "Новий смартфон від Google з чистим Android.",
+            "image": "https://place-hold.it/200x200/aaa/white/white&text=GooglePixel6",
+            "price": 899
+        },
+        {
+            "id": "xiaomi-mi-11",
+            "name": "Xiaomi Mi 11",
+            "shortname": "xiaomi-mi-11",
+            "description": "Флагманський смартфон від Xiaomi з відмінною камерою.",
+            "image": "https://place-hold.it/200x200/aaa/white/white&text=XiaomiMi11",
+            "price": 799
+        },
+        {
+            "id": "oneplus-9",
+            "name": "OnePlus 9",
+            "shortname": "oneplus-9",
+            "description": "Потужний смартфон від OnePlus з швидкою зарядкою.",
+            "image": "https://place-hold.it/200x200/aaa/white/white&text=OnePlus9",
+            "price": 729
+        }
+    ]
+}

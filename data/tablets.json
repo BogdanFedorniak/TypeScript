@@ -1,0 +1,45 @@
+{
+    "categoryName": "Планшети",
+    "items": [
+        {
+            "id": "ipad-pro",
+            "name": "iPad Pro",
+            "shortname": "ipad-pro",
+            "description": "Потужний планшет від Apple з великим дисплеєм.",
+            "image": "https://place-hold.it/200x200/aaa/white/white&text=iPadPro",
+            "price": 999
+        },
+        {
+            "id": "samsung-tab-s7",
+            "name": "Samsung Galaxy Tab S7",
+            "shortname": "samsung-tab-s7",
+            "description": "Новітній планшет від Samsung з високою продуктивністю.",
+            "image": "https://place-hold.it/200x200/aaa/white/white&text=SamsungGalaxyTabS7",
+            "price": 849
+        },
+        {
+            "id": "microsoft-surface-pro",
+            "name": "Microsoft Surface Pro",
+            "shortname": "microsoft-surface-pro",
+            "description": "Високопродуктивний планшет з операційною системою Windows.",
+            "image": "https://place-hold.it/200x200/aaa/white/white&text=MicrosoftSurfacePro",
+            "price": 1199
+        },
+        {
+            "id": "huawei-matepad",
+            "name": "Huawei MatePad Pro",
+            "shortname": "huawei-matepad",
+            "description": "Потужний планшет від Huawei з гарним дизайном.",
+            "image": "https://place-hold.it/200x200/aaa/white/white&text=HuaweiMatePadPro",
+            "price": 749
+        },
+        {
+            "id": "lenovo-tab-p11",
+            "name": "Lenovo Tab P11",
+            "shortname": "lenovo-tab-p11",
+            "description": "Планшет з великим дисплеєм та високою продуктивністю.",
+            "image": "https://place-hold.it/200x200/aaa/white/white&text=LenovoTabP11",
+            "price": 499
+        }
+    ]
+}

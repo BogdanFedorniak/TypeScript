@@ -1,0 +1,45 @@
+{
+    "categoryName": "Ноутбуки",
+    "items": [
+        {
+            "id": "macbook-air",
+            "name": "MacBook Air",
+            "shortname": "macbook-air",
+            "description": "Легкий та потужний ноутбук від Apple.",
+            "image": "https://place-hold.it/200x200/aaa/white/white&text=MacBookAir",
+            "price": 999
+        },
+        {
+            "id": "dell-xps-13",
+            "name": "Dell XPS 13",
+            "shortname": "dell-xps-13",
+            "description": "Компактний та продуктивний ноутбук від Dell.",
+            "image": "https://place-hold.it/200x200/aaa/white/white&text=DellXPS13",
+            "price": 1099
+        },
+        {
+            "id": "hp-spectre-x360",
+            "name": "HP Spectre x360",
+            "shortname": "hp-spectre-x360",
+            "description": "Стильний та потужний ноутбук від HP з можливістю трансформації.",
+            "image": "https://place-hold.it/200x200/aaa/white/white&text=HPSpectrex360",
+            "price": 1299
+        },
+        {
+            "id": "lenovo-thinkpad-x1",
+            "name": "Lenovo ThinkPad X1 Carbon",
+            "shortname": "lenovo-thinkpad-x1",
+            "description": "Професійний ноутбук від Lenovo з високою продуктивністю.",
+            "image": "https://place-hold.it/200x200/aaa/white/white&text=LenovoThinkPadX1Carbon",
+            "price": 1399
+        },
+        {
+            "id": "asus-zenbook",
+            "name": "Asus ZenBook 14",
+            "shortname": "asus-zenbook",
+            "description": "Тонкий та легкий ноутбук від Asus з відмінною автономністю.",
+            "image": "https://place-hold.it/200x200/aaa/white/white&text=AsusZenBook14",
+            "price": 999
+        }
+    ]
+}

@@ -1,0 +1,45 @@
+{
+    "categoryName": "Аксесуари",
+    "items": [
+        {
+            "id": "apple-airpods",
+            "name": "Apple AirPods Pro",
+            "shortname": "apple-airpods",
+            "description": "Бездротові навушники з активним шумопоглинанням.",
+            "image": "https://place-hold.it/200x200/aaa/white/white&text=AppleAirPodsPro",
+            "price": 249
+        },
+        {
+            "id": "samsung-galaxy-buds",
+            "name": "Samsung Galaxy Buds+",
+            "shortname": "samsung-galaxy-buds",
+            "description": "Бездротові навушники з відмінною якістю звуку.",
+            "image": "https://place-hold.it/200x200/aaa/white/white&text=SamsungGalaxyBuds",
+            "price": 149
+        },
+        {
+            "id": "anker-powerbank",
+            "name": "Anker PowerCore 10000",
+            "shortname": "anker-powerbank",
+            "description": "Портативний зарядний пристрій з великою ємністю.",
+            "image": "https://place-hold.it/200x200/aaa/white/white&text=AnkerPowerCore10000",
+            "price": 49
+        },
+        {
+            "id": "logitech-mx-master",
+            "name": "Logitech MX Master 3",
+            "shortname": "logitech-mx-master",
+            "description": "Бездротова миша з ергономічним дизайном.",
+            "image": "https://place-hold.it/200x200/aaa/white/white&text=LogitechMXMaster3",
+            "price": 99
+        },
+        {
+            "id": "amazon-kindle",
+            "name": "Amazon Kindle Paperwhite",
+            "shortname": "amazon-kindle",
+            "description": "Електронна книга з високою роздільною здатністю екрану.",
+            "image": "https://place-hold.it/200x200/aaa/white/white&text=AmazonKindlePaperwhite",
+            "price": 129
+        }
+    ]
+}

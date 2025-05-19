@@ -1,0 +1,45 @@
+{
+    "categoryName": "Носимі пристрої",
+    "items": [
+        {
+            "id": "apple-watch-6",
+            "name": "Apple Watch Series 6",
+            "shortname": "apple-watch-6",
+            "description": "The future of health is on your wrist.",
+            "price": 399,
+            "image": "https://place-hold.it/200x200/aaa/white/white&text=AppleWatchSeries6"
+        },
+        {
+            "id": "fitbit-charge-4",
+            "name": "Fitbit Charge 4",
+            "shortname": "fitbit-charge-4",
+            "description": "Advanced fitness tracker with GPS.",
+            "price": 149,
+            "image": "https://place-hold.it/200x200/aaa/white/white&text=FitbitCharge4"
+        },
+        {
+            "id": "samsung-galaxy-watch-3",
+            "name": "Samsung Galaxy Watch 3",
+            "shortname": "samsung-galaxy-watch-3",
+            "description": "Elegant smartwatch with advanced health monitoring.",
+            "price": 349,
+            "image": "https://place-hold.it/200x200/aaa/white/white&text=SamsungGalaxyWatch3"
+        },
+        {
+            "id": "garmin-forerunner-245",
+            "name": "Garmin Forerunner 245",
+            "shortname": "garmin-forerunner-245",
+            "description": "GPS running smartwatch with advanced training features.",
+            "price": 299,
+            "image": "https://place-hold.it/200x200/aaa/white/white&text=GarminForerunner245"
+        },
+        {
+            "id": "huawei-watch-fit",
+            "name": "Huawei Watch Fit",
+            "shortname": "huawei-watch-fit",
+            "description": "Smartwatch with long battery life.",
+            "price": 129,
+            "image": "https://place-hold.it/200x200/aaa/white/white&text=HuaweiWatchFit"
+        }
+    ]
+}
